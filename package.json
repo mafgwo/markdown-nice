@@ -21,7 +21,8 @@
     "analyze": "source-map-explorer build/static/js/*.js",
     "lint": "eslint src --ext ts,tsx,js --fix",
     "publish:npm": "cross-env NODE_ENV=production && rm -rf lib && mkdir lib && cross-env BABEL_ENV=production npx babel src --out-dir lib --copy-files",
-    "storybook": "npm run publish:npm && start-storybook -p 9001 -c .storybook"
+    "storybook": "npm run publish:npm && start-storybook -p 9001 -c .storybook",
+    "deploy": "ssh root@47.107.98.255 'rm -rf /usr/share/nginx/mdnice/*' && scp -r ./build/* root@47.107.98.255:/usr/share/nginx/mdnice"
   },
   "dependencies": {
     "@sitdown/juejin": "^1.1.1",

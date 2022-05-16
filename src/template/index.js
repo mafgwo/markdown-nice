@@ -1,5 +1,6 @@
 import custom from "./markdown/custom";
 import normal from "./markdown/normal";
+import themes from "./markdown/theme";
 
 import content from "./content.md";
 
@@ -23,6 +24,7 @@ export default {
   basic,
   normal,
   custom,
+  themes,
   code: {
     atomOneDark,
     atomOneLight,
